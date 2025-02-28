@@ -34,7 +34,7 @@ const NewsSection: React.FunctionComponent<Props> = ({ articles }) => {
 	const uniqArticles = [...new Set(articles)];
 
 	return (
-		<section className=' grid grid-cols-2 gap-5'>
+		<section className=' gap-5 border-t-1'>
 			{uniqArticles.map((article) => (
 				<Article key={article.title + article.source.id} article={article} />
 			))}

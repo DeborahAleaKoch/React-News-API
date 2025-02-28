@@ -4,7 +4,7 @@ import NewsSection, { apiKey, ArticleResponse } from "./NewsSection";
 const InputSection = () => {
 	const [newsDetails, setNewsDetails] = useState<ArticleResponse>();
 	const [searchValue, setSearchValue] = useState<string>("");
-	const [language, setLanguage] = useState<string>("sv");
+	const [language, setLanguage] = useState<string>("de");
 	//Die API wird bei der Eingabe ins input feld und/oder bei der Sprachauswahl(änderung auch von dieser) gefetched
 	useEffect(() => {
 		fetch(
@@ -19,7 +19,7 @@ const InputSection = () => {
 
 	return (
 		<>
-			<div className='flex gap-12 border-b-1 border-slate-700 pb-10 '>
+			<div className='flex gap-10 border-slate-700 pb-10 flex-wrap'>
 				<input
 					type='text'
 					value={searchValue}
